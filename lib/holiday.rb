@@ -52,7 +52,7 @@ def all_supplies_in_holidays(holiday_hash)
 end
 
 def all_holidays_with_bbq(holiday_hash)
-  holiday_hash.each{|season, holidays| season.each
+  holiday_hash.each{|season, holidays| season.collect{|holiday, events| events.include?("BBQ")}}
 end
 
 
